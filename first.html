@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        
+        
+        <title>Document</title>
+        <style>
+                
+        </style>
+</head>
+<body>
+        
+        <div class="app"></div>
+        <script src="https://kit.fontawesome.com/d4fc1c8ba8.js" crossorigin="anonymous"></script>
+        <!-- <script type="module" src="firebase.js"></script> -->
+        <script  src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script  src="scr/slick.min.js"></script>
+        <script >
+                $(document).ready(function(){
+                $('.slider').slick({
+                arrows:true,
+                speed:500,
+                infinite: false,
+                touchThreshold: 10,
+                fade:true,
+                draggable:false,
+                responsive:[
+                        {
+                                breakpoint: 768,
+                                settings:{
+
+                                }
+                        },
+                        {
+                                breakpoint: 480,
+                                settings:{
+                                        
+                                }
+                        }
+                ],
+                prevArrow: '<button class="slick-arrrow slick-prev">Back</button>',
+                nextArrow: '<button class="slick-arrow slick-next">Next</button>',
+                appendArrows:$('.buttons'),
+                
+
+        });
+        $('.slider').slick('setPosition');
+        
+        
+
+        $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                console.log(currentSlide);
+                $('.slick-arrow.slick-next').attr('disabled', false);
+                $('.slick-arrow.slick-next').css('opacity', '1');
+                switch(nextSlide) {
+                        
+                        case 2:
+                                $('.slick-arrow.slick-next').attr('disabled', false);
+                                $('.slick-arrow.slick-next').css('opacity', '1');
+                                break;
+                        case 3:
+                                // $('.slick-arrow.slick-next').attr('disabled', true);
+                                // $('.slick-arrow.slick-next').css('opacity', "0.2");
+                                // // console.log($('.slick-arrow'));
+                                // $('.level').on('click', function(event){
+                                //         let option = event.target.closest('.level-option');
+                                //         if (option) {
+                                //                 $('.slick-arrow.slick-next').attr('disabled', false);
+                                //                 $('.slick-arrow.slick-next').css('opacity', "1");  
+                                //         }
+                                // })
+                                $('.slick-arrow.slick-next').attr('disabled', false);
+                                $('.slick-arrow.slick-next').css('opacity', '1');
+                                break;
+                        case 4:
+                                
+                                // $('.slick-arrow.slick-next').attr('disabled', true);
+                                // $('.slick-arrow.slick-next').css('opacity', "0.2");
+                                // $('.goals').on('click', function(event){
+                                //         let option = event.target.closest('.goals__option');
+                                //         //console.log(option);
+                                //         if (!option) {
+                                //                 $('.slick-arrow.slick-next').attr('disabled', true);
+                                //                 $('.slick-arrow.slick-next').css('opacity', ".2");  
+                                //         }
+                                // })
+                                $('.slick-arrow.slick-next').attr('disabled', false);
+                                $('.slick-arrow.slick-next').css('opacity', '1');
+                                break;
+                        case 5:
+                                if (($('#dips').val() === '' || $('#dips').val() < 0) 
+                                || ($('#pullups').val() === '' || $('#pullups').val() < 0) 
+                                || ($('#squats').val() === '' || $('#squats').val() < 0) 
+                                || ($('#pushups').val() === '' || $('#pushups').val() < 0)){
+                                        $('.slick-arrow.slick-next').attr('disabled', true);
+                                        $('.slick-arrow.slick-next').css('opacity', "0.2");
+                                }
+                                
+                                $('#dips').on('input', checkPerfomance);
+                                $('#squats').on('input', checkPerfomance);
+                                $('#pullups').on('input', checkPerfomance);
+                                $('#pushups').on('input', checkPerfomance);
+
+                                function checkPerfomance() {
+                        
+
+                                        if(($('#dips').val() === '' || $('#dips').val() < 0) 
+                                        || ($('#pullups').val() === '' || $('#pullups').val() < 0) 
+                                        || ($('#squats').val() === '' || $('#squats').val() < 0) 
+                                        || ($('#pushups').val() === '' || $('#pushups').val() < 0)){
+                                                $('.slick-arrow.slick-next').attr('disabled', true);
+                                                $('.slick-arrow.slick-next').css('opacity', "0.2");
+                                        } else {
+                                                $('.slick-arrow.slick-next').attr('disabled', false);
+                                                $('.slick-arrow.slick-next').css('opacity', "1");
+                                        }
+                                };
+                                break;
+                        // case 6:
+                        //         $('.slick-arrow.slick-next').attr('disabled', true);
+                        //         $('.slick-arrow.slick-next').css('opacity', "0.2");
+                               
+                                
+                        //         break;
+                        
+
+                }
+                
+                        
+                 
+        });
+});  
+        </script>
+        <script type="module" src="scr/slider.js"></script>
+        <script src="scr/to-do-list.js"></script>
+        <script src="scr/recipes.js"></script>
+        <script src="scr/workout-library.js"></script>
+        <script src="scr/fatburn.js"></script>
+        <script src="scr/strenght.js"></script>
+        <script src="scr/strenght.js"></script>
+        <script src="scr/muscle.js"></script>
+        <script type="module" src="scr/main.js"></script>
+        
+        
+        <!-- <script type="module" src="login.js"></script> -->
+        <!-- <script type="module" src="build-account-page.js"></script> -->
+        
+</body>
+</html>

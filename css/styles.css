@@ -1,0 +1,2114 @@
+body{
+        padding:0;
+        margin:0;
+}
+a{
+        text-decoration: none;
+}
+
+.mainmenu__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border: 1px gray solid;
+        display: flex;
+      }
+  
+      .mainmenu li {
+        list-style: none;
+      }
+  
+      .mainmenu__link {
+        display: block;
+        padding: 10px 25px;
+        color: #000;
+        text-decoration: none;
+        transition:.2s;
+      }
+  
+      .mainmenu__link:hover {
+        text-decoration: none;
+        background-color: rgb(27, 147, 203);
+        color: #fff;
+      }
+  
+      .mainmenu__link.active {
+        text-decoration: none;
+        background-color: #18a3cd;
+        color: #fff;
+      }
+  
+      .content {
+        padding: 1.5em 0;
+      }
+.main_login{
+        position:relative;
+        width:100vw;
+        height:100vh;
+        background:url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/kek.jpg?raw=true");
+        
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index:0;
+        display: grid;
+        justify-content: center;
+        align-items:center;
+        
+}
+.main_login::after{
+        content:'';
+        display: block;
+        padding:0;
+        margin:0;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+
+        background-color:rgb(47, 45, 45);
+        opacity:.7;
+        z-index:-1;
+}
+.main_login .main__info{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(20px, 350px));
+        row-gap: 30px;
+        column-gap:20px;
+}
+.main_login .main__title{
+        grid-column: 1/3;
+        text-align: center;
+        padding:0;
+        margin:0;
+        color:white;
+        font-size:3em;
+        
+}
+.main_login .main__btn-create{
+        text-decoration: none;
+        text-align: center;
+        background-color: rgb(43, 43, 200);
+        color:white;
+        border:none;
+        border-radius:6px;
+        padding:10px 0;
+        font-size: 1.05em;
+        cursor:pointer;
+        transition:.2s;
+        letter-spacing: .8px;
+}
+.main_login .main__btn-create:hover{
+        background-color: rgb(82, 82, 204);
+}
+.main_login .main__btn-create:active{
+        background-color: rgb(144, 144, 184);
+}
+.main_login .main__btn-login{
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+        color:rgb(117, 117, 117);
+        border:none;
+        border-radius:6px;
+        padding:10px 0;
+        font-size: 1.05em;
+        cursor:pointer;
+        transition:.2s;
+        letter-spacing: .8px;
+}
+.main_login .main__btn-login:hover{
+        color: rgb(171, 171, 196);
+}
+.main_login .main__btn-login:active{
+        color: rgb(6, 6, 83);
+}
+/* ///////////////////////////////////Login//////////////////////////////////////////// */
+.main_login-form{
+        background-color: rgb(31, 30, 30);
+        z-index:0;
+        min-height:100vh;
+        position:relative;
+}
+.main_login-form::after{
+        content:'';
+        display: block;
+        padding:0;
+        margin:0;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/kek.jpg?raw=true");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(18px);
+        -webkit-filter: blur(18px);
+        opacity:.6;
+        z-index:-1;
+}
+
+.login.form-container{
+        max-width: 400px;
+        margin:0px auto 0;
+        padding-top:150px;
+        
+}
+.registration .form,
+.login .form{
+        width:90%;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+        gap:15px;
+
+}
+.registration .form__title,
+.login .form__title{
+        color:white;
+        margin:0;
+        padding:0;
+        font-size:3em;
+        padding-bottom:50px;
+        text-align: center;
+}
+.registration .form__field,
+.login .form__field{
+        width:100%;
+        position:relative;
+}
+.registration .fa-eye, .fa-eye-slash,
+.login .fa-eye, .fa-eye-slash{
+        position:absolute;
+        top:50%;
+        right:0;
+        transform:translate(50%, -50%);
+        color:rgb(193, 193, 193);
+        cursor:pointer;
+        
+}
+.registration .form__field input,
+.login .form__field input{
+        padding:10px 0px 10px 10px;
+        margin:0;
+        width:100%;
+        background-color:transparent;
+        color:white;
+        border:none;
+        border-bottom:1px solid gray;
+        font-size:1.05em;
+        transition:.2s;
+        
+        
+        
+}
+.registration .form__field input:focus,
+.login .form__field input:focus{
+        outline:none;
+        
+        
+}
+.registration .form__field input::placeholder,
+.login .form__field input::placeholder{
+        color:rgb(144, 144, 144);
+        
+}
+.registration .form__btn,
+.login .form__btn{
+        text-align: center;
+        width:90%;
+        margin-top:20px;
+        font-size:1.2em;
+        color:white;
+        background-color: rgb(62, 62, 171);
+        border-radius:8px;
+        border:none;
+        padding:10px 20px;
+        transition:.15s;
+        cursor:pointer;
+}
+.registration .form__btn.disabled,
+.login .form__btn.disabled{
+        opacity:0.3;
+}
+
+/* Стрелка вправо */
+.registration .form__btn:hover,
+.login .form__btn:hover{
+        background-color: rgb(82, 82, 204);
+}
+.registration .form__btn:active,
+.login .form__btn:active{
+        background-color: rgb(77, 77, 100);
+}
+
+.form .error-modal{
+        box-sizing: border-box;
+        position:absolute;
+        top:-38px;
+        left:0;
+        right:0;
+        height:38px;
+        background-color: rgb(206, 93, 93);
+        color:white;
+        padding:10px 0;
+        transition:.2s;
+        text-align: center;
+}
+
+.form .error-modal.show{
+        top:0;
+}
+/* /////////////////////////////////Slider/////////////////////////////////////////// */
+input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus {
+                        border: none;
+                        -webkit-text-fill-color: white;
+                        -webkit-box-shadow: 0 0 0px 1000px #468fb7 inset;
+                        transition: background-color 5000s ease-in-out 0s;
+                }
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                }
+
+                /* Firefox */
+                input[type=number] {
+                        -moz-appearance: textfield;
+                }
+                .main_slider, .main_login-form{
+                        background-color: rgb(31, 30, 30);
+                        z-index:0;
+                        min-height:100vh;
+                        position:relative;
+                }
+                .main_slider::after,
+                .main_login-form::after{
+                        content:'';
+                        display: block;
+                        padding:0;
+                        margin:0;
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        background:url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/kek.jpg?raw=true");
+                        background-position: center center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        filter: blur(18px);
+                        -webkit-filter: blur(18px);
+                        opacity:.6;
+                        z-index:-1;
+                }
+                .wrapper{
+                        height:100%;
+                        padding:50px;
+                }
+                /* Слайдер */
+                .slick-slider{
+
+                }
+                .slider__item{
+                        text-align: center;
+                        
+                }
+                /* Слайдер запущен */
+                .slick-slider.slick-initialized{}
+                /* Слайдер с точками */
+                .slick-slider.slick-dotted{}
+                /* Ограничивающая оболочка */
+                .slick-list {
+                        overflow:hidden;
+                }
+                /* Лента слайдов */
+                .slick-track{
+                        display: flex;
+                        align-items: flex-start;
+                }
+                /* Слайд */
+                .slick-slide{}
+                /* Слайд активный (показывается) */
+                .slick-slide.slick-active{}
+                /* Слайд основной */
+                .slick-slide.slick-current{}
+                /* Слайд по центру */
+                .slick-slide.slick-center{}
+                /* Клонированный слайд */
+                .slick-slide.slick-cloned{}
+                /* Стрелка */
+                .slick-arrow{}
+                /* Стрелка влево */
+                .main_slider .buttons{
+                        max-width: 200px;
+                        margin:30px auto 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap:25px;
+                }
+                
+                .buttons .slick-arrow.slick-disabled{
+                        opacity:.2;
+                }
+                .slick-arrow.slick-prev, .slick-arrow.slick-next{
+                        font-size:1.2em;
+                        color:white;
+                        background-color: rgb(62, 62, 171);
+                        border-radius:8px;
+                        border:none;
+                        padding:10px 20px;
+                        transition:.15s;
+                        cursor:pointer;
+                }
+                /* Стрелка вправо */
+                .slick-arrow.slick-prev:hover, .slick-arrow.slick-next:hover{
+                        background-color: rgb(82, 82, 204);
+                }
+                .slick-arrow.slick-prev:active, .slick-arrow.slick-next:active{
+                        background-color: rgb(77, 77, 100);
+                }
+                .slick-arrow.slick-prev.slide-form{
+                        background-color: rgba(128, 128, 128, 0.282);
+                        color:rgb(63, 62, 62);
+                }
+                /* Стрелка не активная */
+                .slick-arrow.slick-disabled{}
+                /* Точки (булиты) */
+                .slick-dots{}
+                .slick-dots li{}
+                /* Активная точка */
+                .slick-dots li.slick-active{}
+                /* Элемент точки */
+                .slick-dots li button{}
+
+                .slider{
+                        position:relative;
+                }
+
+                
+                /* ///////////////////////////////////Gender/////////////////////////////////////////// */
+
+                .main_slider .gender{
+                        max-width:400px;
+                        margin:100px auto;
+                        display:grid;
+                        grid-template-columns:repeat(2, minmax(20px, 200px));
+                        grid-template-rows:minmax(20px, 90px) minmax(20px, 220px);
+                        column-gap:20px;
+                        
+                }
+                .main_slider .gender__title{
+                        align-self: flex-start;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin:0;
+                        padding:0;
+                        font-size:3em;
+                        color:white;
+                        grid-column:1/3;
+                        grid-row:1/2;
+                }
+                .main_slider .gender__male, .gender__female{
+                        border:2.5px solid rgb(144, 144, 144);
+                        border-radius:8px;
+                        display: flex;
+                        justify-content: center;
+                        align-items:flex-end;
+                        cursor:pointer;
+                        transition:.2s;
+                }
+                .main_slider .gender__male:active, .gender__female:active{
+                        background-color: rgba(137, 132, 132, 0.347);
+                }
+                .main_slider .gender__male.active, .gender__female.active{
+                        border:2.5px solid blue;
+                }
+                .main_slider .gender__male{
+                        grid-column:1/2;
+                        grid-row:2/3;
+                        background: url("https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/yaroslav20003/fd2-project/26d4dc9673b8c753fc5c492a44b69adabf96a624/img/male.svg");
+                        background-size:40%;
+                        background-position:center center;
+                        background-repeat:no-repeat;
+                }
+                .main_slider .gender__female{
+                        grid-column:2/3;
+                        grid-row:2/3;
+                        background: url("https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/yaroslav20003/fd2-project/26d4dc9673b8c753fc5c492a44b69adabf96a624/img/female.svg");
+                        background-size:40%;
+                        background-position:center center;
+                        background-repeat:no-repeat;
+                }
+                .main_slider .gender p{
+                        color:white;
+                        font-size:1.4em;
+                }
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////Height/////////////////////////////////////////// */
+                .main_slider .height, .weight{
+                        
+                        max-width:400px;
+                        margin:100px auto 0;
+                        display:flex;
+                        flex-direction:column;
+                        justify-content: space-evenly;
+                        align-items:center;
+                        gap:35px;
+                        
+                }
+                .main_slider .height__title, .weight__title, .level__title, .goals__title{
+                        margin:0;
+                        padding:0;
+                        font-size:3em;
+                        color:white;
+
+                }
+                .main_slider .cm-or-inch, .kg-or-lb{
+                        background-color: rgb(136, 136, 136);
+                        border-radius:22px;
+                        color:white;
+                        
+                }
+
+                .main_slider .cm, .in, .kg, .lb{
+                        background: transparent;
+                        border:none;
+                        color:rgba(0, 0, 0, 0.33);
+                        transition:.1s ease-in-out;
+                        font-size:1.5em;
+                        border-radius:22px;
+                        cursor:pointer;
+                }
+                .main_slider .cm, .kg{
+                        padding:10px 20px;
+                }
+                .main_slider .in, .lb{
+                        padding:10px 22px;
+                }
+                .main_slider .cm.active, .in.active, .kg.active, .lb.active{
+                        background-color: rgb(203, 203, 203);
+                        
+                        color:rgb(63, 59, 59);
+                }
+                .main_slider .selector{
+                        width:150px;
+                        
+                        
+                }
+                .main_slider .selectField{
+                        box-sizing: border-box;
+                        text-align: center;
+                        width:100%;
+                        padding:5px 10px;
+                        background-color:rgba(37, 37, 44, 0.145);
+                        border-radius:22px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        cursor:pointer;
+
+                }
+                .main_slider .selectField p{
+                        color:white;
+                        font-size:1.2em;
+                }
+                .main_slider .icon-circle-down{
+                        width:20px;
+                        height:20px;
+                }
+                .main_slider .height-list, .weight-list{
+                        background-color:rgba(96, 96, 175, 0) ;
+                        border-radius:6px;
+                        list-style-type:none;
+                        padding:0;
+                        margin:0;
+                        width:100%;
+                        height:190px;
+                        overflow-y:scroll;
+
+                }
+                .main_slider .hidden{
+                        display:none;
+                }
+                .main_slider .option{
+                        box-sizing: border-box;
+                        padding:15px;
+                        width:100%;
+                        padding:10px;
+                        margin:0;
+                        cursor:pointer;
+                        transition:.15s;
+                        text-align: center;
+                        border-radius:6px;
+                        color:rgb(255, 255, 255);
+                        
+                }
+                .main_slider .option:hover{
+                        background-color: rgba(64, 64, 107, 0.519);
+                }
+                .main_slider .option:active{
+                        background-color: rgb(36, 173, 203);
+                }
+                .main_slider .icon-circle-down{
+                        transform:rotate(0deg);
+                        transition:.2s;
+                }
+                .main_slider .rotate{
+                        transform: rotate(180deg);
+                        transition:.2s;
+                }
+                ::-webkit-scrollbar{
+                        width:10px;
+
+                }
+                ::-webkit-scrollbar-track{
+                        background-color: rgba(187, 187, 187, 0);
+                }
+                ::-webkit-scrollbar-thumb{
+                        background-color: rgb(0, 179, 255);
+                        border-radius:6px;
+                }
+/* //////////////////////////////////Level//////////////////////////////////////////// */
+.main_slider .level{
+                        max-width:400px;
+                        margin:100px auto 0;
+                        display:flex;
+                        flex-direction: column;
+                        align-content: center;
+                        gap:20px;
+                }
+                .main_slider .level__title, .goals__title{
+                        text-align: center;
+                }
+                .main_slider .level-option{
+                        text-align: left;
+                        width:400px;
+                        border:2px solid rgb(163, 163, 163);
+                        border-radius:8px;      
+                        padding:10px 20px;
+                        cursor:pointer;
+                }
+                .main_slider .level-option.active{
+                        border:2px solid blue;
+                }
+                .main_slider .level-option__title{
+                        font-size:1.4em;
+                        font-weight: bold;
+                        color:whitesmoke;
+                }
+                .main_slider .level-option p{
+                        font-size:1.1em;
+                }
+                .main_slider .level-option__explanation{
+                        font-size:1.05em;
+                        color:rgb(181, 181, 181);
+                }
+                .main_slider .level-option__title, .level-option__explanation{
+                        margin:0 0 6px 0;
+                        padding:0;
+                }
+/* //////////////////////////////////Goals//////////////////////////////////////////// */
+                .main_slider .goals{
+                        max-width:400px;
+                        margin:100px auto 0;
+                        display:flex;
+                        flex-direction: column;
+                        align-content: center;
+                        gap:20px;
+                }
+                .main_slider .goals__title{
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        gap:10px;
+                }
+                .main_slider .goals__title .goals__title-explanation{
+                        font-size: .4em;
+                        color:rgb(207, 207, 207);
+                }
+                .main_slider .goals__option{
+                        text-align: left;
+                        width:400px;
+                        border:2px solid rgb(163, 163, 163);
+                        border-radius:8px;      
+                        padding:10px 20px;
+                        cursor:pointer;
+                        position:relative;
+                }
+                .main_slider .goals__option.active{
+                        border:2px solid blue;
+                }
+                .main_slider .goals__option.active::after{
+                        content:'';
+                        display:inline-block;
+                        position:absolute;
+                        top:50%;
+                        right:2%;
+                        width:30px;
+                        height:30px;
+                        transform:translate(0, -50%);
+                        background: url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/check.png?raw=true");
+                        background-repeat:no-repeat;
+                        background-size: cover;
+                        background-position: center right;
+                }
+                .main_slider .goals__option__title{
+                        font-size:1.4em;
+                        font-weight: bold;
+                        color:whitesmoke;
+                }
+                .main_slider .goals__option__explanation{
+                        font-size:1.05em;
+                        color:rgb(181, 181, 181);
+                }
+                .main_slider .goals__option__title, .goals__option__explanation{
+                        margin:0 0 6px 0;
+                        padding:0;
+                }
+/* /////////////////////////////////Perfomance///////////////////////////////////////////// */
+.main_slider .perfomance{
+                        max-width:400px;
+                        margin:200px auto;
+                        display: flex;
+                        flex-direction:column;
+                        justify-content:center;
+                        align-items:center;
+                        gap:20px;
+                }
+                .main_slider .perfomance__title{
+                        color:white;
+                        font-size:3em;
+                        margin:0;
+                        padding:0;
+                }
+                .main_slider .perfomance__statistics{
+                        display: grid;
+                        grid-template-columns:repeat(2, minmax(20px, 200px));
+                        row-gap:30px;
+                }
+                .main_slider .perfomance__result{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content:center;
+                        align-items: center;
+                        gap:5px;
+                }
+                .main_slider .perfomance__result label{
+                        color:white;
+                        font-size:1.1em;
+                }
+                .main_slider .perfomance__result input{
+                        width:15%;
+                        text-align: center;
+                        color:white;
+                        background-color: transparent;
+                        border:none;
+                        outline:1.5px solid rgb(175, 175, 175);
+                        border-radius:8px;
+                        padding:10px 20px;
+                }
+                .main_slider .perfomance__result input:focus{
+                        outline:1.5px solid rgb(55, 147, 186);
+                }
+                .main_slider .perfomance .error-modal,
+                .main_slider .form .error-modal{
+                        box-sizing: border-box;
+                        position:absolute;
+                        top:-38px;
+                        left:0;
+                        right:0;
+                        height:38px;
+                        background-color: rgb(206, 93, 93);
+                        color:white;
+                        padding:10px 0;
+                        transition:.2s;
+                }
+                .main_slider .perfomance .error-modal.show,
+                .main_slider .form .error-modal.show{
+                        top:0;
+                }
+                
+/* ///////////////////////////////////Modal/////////////////////////////////////////// */
+.main_slider .registration.form-container{
+                        max-width: 400px;
+                        margin:100px auto 0;
+                        
+                }
+                .main_slider .login.form-container{
+                        max-width: 400px;
+                        margin:auto;
+                }
+                .main_slider .registration .form,
+                .main_slider .login .form{
+                        width:90%;
+
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:center;
+                        align-items: center;
+                        gap:15px;
+
+                }
+                .main_slider .registration .form__title,
+                .main_slider .login .form__title{
+                        color:white;
+                        margin:0;
+                        padding:0;
+                        font-size:3em;
+                        padding-bottom:100px;
+                        text-align: center;
+                }
+                .main_slider .registration .form__field,
+                .main_slider .login .form__field{
+                        width:100%;
+                        position:relative;
+                }
+                .main_slider .registration .fa-eye, .fa-eye-slash,
+                .main_slider .login .fa-eye, .fa-eye-slash{
+                        position:absolute;
+                        top:50%;
+                        right:0;
+                        transform:translate(50%, -50%);
+                        color:rgb(193, 193, 193);
+                        cursor:pointer;
+                        
+                }
+                .main_slider .registration .form__field input,
+                .main_slider .login .form__field input{
+                        padding:10px 0px 10px 10px;
+                        margin:0;
+                        width:100%;
+                        background-color:transparent;
+                        color:white;
+                        border:none;
+                        border-bottom:1px solid gray;
+                        font-size:1.05em;
+                        transition:.2s;
+                        
+                        
+                        
+                }
+                .main_slider .registration .form__field input:focus,
+                .main_slider .login .form__field input:focus{
+                        outline:none;
+                        
+                        
+                }
+                .main_slider .registration .form__btn.hidden{
+                        display:none;
+                }
+                .main_slider .registration .form__field input::placeholder,
+                .main_slider .login .form__field input::placeholder{
+                        color:rgb(144, 144, 144);
+                        
+                }
+                .main_slider .registration .form__btn,
+                .main_slider .login .form__btn{
+                        text-decoration: none;
+                        width:90%;
+                        margin-top:20px;
+                        font-size:1.2em;
+                        color:white;
+                        background-color: rgb(62, 62, 171);
+                        border-radius:8px;
+                        border:none;
+                        padding:10px 20px;
+                        transition:.15s;
+                        cursor:pointer;
+                }
+                .main_slider .registration .form__btn.disabled,
+                .main_slider .login .form__btn.disabled{
+                        opacity:0.3;
+                }
+                
+                /* Стрелка вправо */
+                .main_slider .registration .form__btn:hover,
+                .main_slider .login .form__btn:hover{
+                        background-color: rgb(82, 82, 204);
+                }
+                .main_slider .registration .form__btn:active,
+                .main_slider .login .form__btn:active{
+                        background-color: rgb(77, 77, 100);
+                }
+/* ///////////////////////////////////Account page////////////////////////////////////////////// */
+.main_account{
+        background-color: rgb(85, 85, 85);
+        z-index:0;
+        min-height:100vh;
+        position:relative;
+        
+}
+.main_account::after{
+        content:'';
+        display: block;
+        padding:0;
+        margin:0;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/kek.jpg?raw=true");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(18px);
+        -webkit-filter: blur(18px);
+        opacity:.6;
+        z-index:-1;
+}
+.account-container{
+        max-width: 1000px;
+        margin:auto;
+        padding-top:100px;
+        display: flex;
+        justify-content: center;
+        align-content:center;
+       
+}
+.account{
+        background-color: whitesmoke;
+        border-radius:8px;
+        box-shadow: 0px 0px 20px 4px #a5a5a5;
+        color:rgb(62, 61, 61);
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap:30px;
+        padding:30px;
+}
+
+.account__img img{
+        object-fit: cover;
+        width:100%;
+        height:100%;
+}
+
+.account__title{
+        display: flex;
+        justify-content: space-evenly;
+        
+        padding-bottom:20px;
+        margin:0;
+        
+}
+.fa-solid.fa-right-from-bracket{
+        cursor:pointer;
+        z-index: 0;
+}
+.fa-solid.fa-right-from-bracket::before{
+        z-index: -1;
+}
+.account__field{
+        margin-bottom:10px;
+        display: flex;
+        align-items: center;
+        gap:20px;
+
+}
+.account__field .goals{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:15px;
+        list-style: none;
+}
+.account__field .goals{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:15px;
+        list-style: none;
+}
+.account__perfomance{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:15px;
+}
+.account__field h4{
+        font-size:1.4em;
+        margin:0;
+        padding:0;
+}
+.account__field h6{
+        font-size:1.2em;
+        margin:0;
+        padding:0;
+}
+.account__field p{
+       
+        font-size:1.1em;
+        text-align: center;
+        margin:0;
+        padding:0;
+}
+.account__buttons{
+        display: flex;
+        gap:20px;
+}
+.account__btn.save.hidden{
+        display: none;
+}
+.account__btn.edit,
+.account__btn.save{
+        border:none;
+        background-color: gray;
+        color:white;
+        padding:10px 14px;
+        border-radius:8px;
+        font-size: 1.2em;
+        margin-top:15px;
+        cursor:pointer;
+        transition:.2s;
+}
+.account__btn.edit:hover,
+.account__btn.save:hover{
+        background-color: rgb(165, 165, 165);
+}
+.account__btn.edit:active,
+.account__btn.save:active{
+        background-color: rgb(69, 66, 66);
+}
+/* //////////////////////////////////////ToDoList////////////////////////////////////////////// */
+.main_to-do-list{
+        background-color: rgb(191, 191, 191);
+        z-index:0;
+        min-height:100vh;
+        position:relative;
+}
+.main_to-do-list h1{
+        padding:50px 0;
+        margin:0;
+        text-align: center;
+        font-size:2.7em;
+}
+.main_to-do-list form {
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main_to-do-list form input, 
+    .main_to-do-list form button {
+        padding: 0.5rem;
+        padding-left: 1rem;
+        font-size: 1.8rem;
+        border: none;
+        background: white;
+        border-radius: 2rem;
+    }
+    
+    .main_to-do-list form button {
+        color: rgb(0, 183, 255);
+        background: white;
+        cursor: pointer;
+        transition: all 0.3 ease;
+        margin-left: 0.5rem;
+    }
+    
+    .main_to-do-list form button:hover {
+        color: white;
+        background: rgb(0, 217, 255);
+    }
+    
+    .main_to-do-list .fa-plus-circle {
+        margin-top: 0.3rem;
+        margin-left: -8px;
+    }
+    
+    .main_to-do-list .todo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main_to-do-list .todo-list {
+        min-width: 30%;
+        list-style: none;
+    }
+    
+    .main_to-do-list .todo {
+        margin: 0.5rem;
+        padding-left: 0.5rem;
+        background: white;
+        color: black;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+        border-radius: 2rem;
+    }
+    
+    .main_to-do-list .todo li {
+        flex: 1;
+    }
+    
+    .main_to-do-list .trash-btn, 
+    .main_to-do-list .complete-btn {
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    
+    .main_to-do-list .complete-btn {
+        background: rgb(0, 195, 255);
+    }
+    
+    .main_to-do-list .trash-btn {
+        border-top-right-radius: 1.75rem;
+        border-bottom-right-radius: 1.75rem;
+        background: rgb(171, 171, 171);
+    }
+    
+    .main_to-do-list .todo-item {
+        padding: 0rem 0.5rem;
+    }
+    
+    .main_to-do-list .fa-trash, 
+    .main_to-do-list .fa-check-circle {
+        pointer-events: none;
+    }
+    
+    .main_to-do-list .completed {
+        text-decoration: line-through;
+        opacity: 0.5;
+    }
+    
+    .main_to-do-list .slide {
+        transform: translateX(10rem);
+        opacity: 0;
+    }
+    
+    .main_to-do-list select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        border: none;
+    }
+    
+    .main_to-do-list .select {
+        margin: 1rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50px;
+    }
+    
+    .main_to-do-list select {
+        color:rgba(0, 183, 255, 0.518);
+        width: 10rem;
+        height: 3.2rem;
+        cursor: pointer;
+        padding: 1rem;
+    }
+    
+    .main_to-do-list .select::after {
+        content: "\25BC";
+        position: absolute;
+        background:rgb(71, 115, 135);
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    
+    .main_to-do-list .select::hover::after {
+        background: white;
+        color: rgb(79, 147, 141);
+    }
+/* //////////////////////////////////////////Recipes/////////////////////////////////////////////// */
+:root{
+        --tenne-tawny: rgb(84, 81, 77);
+        --tenne-tawny-dark:rgb(9, 9, 9);
+}
+
+
+.main_recipes{
+        background-color: rgb(232, 232, 232);
+z-index:0;
+min-height:100vh;
+position:relative;
+}
+.btn{
+        cursor:pointer;
+        outline:0;
+        font-size:1.05rem;
+}
+.meal-title{
+        font-size:2rem;
+        margin-bottom:1rem;
+        color:rgb(0, 0, 0);
+}
+.container{
+        min-height:100vh;
+}
+.meal-wrapper{
+        max-width:1280px;
+        margin:0 auto;
+        padding:2rem;
+        background-color: #ffffff0b;
+        text-align: center;
+}
+.meal-search{
+        margin:2rem 0;
+}
+
+.meal-search cite{
+        font-size:1rem;
+}
+.meal-search-box{
+        margin:1.2rem 0;
+        display: flex;
+        align-items: stretch;
+}
+.search-control,
+.search-btn{
+        width:100%;
+}
+.search-control{
+        padding:0 1rem;
+        font-size:1.1rem;
+        outline:0;
+        border:1px solid var(--tenne-tawny);
+        color:var(--tenne-tawny-dark);
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius:2rem;
+}
+.search-control::placeholder{
+        color:var(--tenne-tawny);
+        opacity:.7;
+}
+.search-btn{
+        width:55px;
+        height:55px;
+        font-size:1.8rem;
+        background-color: var(--tenne-tawny);
+        color:white;
+        border:none;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius:2rem;
+        transition:all .4s linear;
+
+}
+.search-btn:hover{
+        background-color: var(--tenne-tawny);
+
+}
+.meal-result{
+        margin-top:4rem;
+}
+.meal-result-title{
+        text-align: center;
+        color:rgb(10, 10, 10);
+}
+.meal{
+        margin: 2.4rem 0;
+}
+.meal-item{
+        border-radius:1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius:1rem;
+        overflow: hidden;
+        box-shadow:0 4px 21px -12px rgba(0, 0, 0, 0.79);
+        margin:2rem 0;
+}
+.meal-img img{
+        object-fit: cover;
+        width:100%;
+        height:100%;
+        display: block;
+}
+.meal-name{
+        padding:1.5rem 0 .5rem;
+}
+.meal-name h3{
+        font-size:1.4rem;
+}
+.recipe-btn{
+        text-decoration: none;
+        color:white;
+        background-color: var(--tenne-tawny);
+        font-weight:500;
+        font-size:1.1rem;
+        padding:.75rem 0;
+        display: block;
+        width:175px;
+        margin:1rem auto;
+        border-radius:2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius:2rem;
+        transition:all .4s linear;
+        -webkit-transition: all .4s linear;
+        -moz-transition: all .4s linear;
+        -ms-transition: all .4s linear;
+        -o-transition:all .4s linear;
+
+}
+.recipe-btn:hover{
+        background-color: var(--tenne-tawny-dark);
+
+}
+.meal-details{
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        color:white;
+        background-color: var(--tenne-tawny);
+        border-radius:1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius:1rem;
+        width:90%;
+        height:90%;
+        overflow-y: scroll;
+        display: none;
+        padding:2rem 0;
+}
+.meal-details::-webkit-scrollbar{
+        width:10px;
+        
+
+
+}
+.meal-details::-webkit-scrollbar-thumb{
+        background-color: whitesmoke;
+        border-radius:2rem;
+        -webkit-border-radius: 2rem;
+        -moz-border-radius: 2rem;
+        -ms-border-radius: 2rem;
+        -o-border-radius:2rem;
+}
+
+.showRecipe{
+        display: block;
+}
+.meal-details-content{
+        margin:2rem;
+}
+.meal-details-content p:not(.recipe-category){
+        padding:1rem 0;
+}
+
+.recipe-close-btn{
+        position: absolute;
+        right:2rem;
+        top: 2rem;
+        font-size:1.8rem;
+        background-color: white;
+        border:none;
+        width:35px;
+        height:35px;
+        border-radius:50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        opacity:.9;
+}
+.recipe-title{
+        letter-spacing:1px;
+        padding-bottom:1rem;
+}
+.recipe-category{
+        background-color: white;
+        font-weight:600;
+        color:var(--tenne-tawny);
+        display: inline-block;
+        padding:.2rem .5rem;
+        border-radius:.3rem;
+        -webkit-border-radius: .3rem;
+        -moz-border-radius: .3rem;
+        -ms-border-radius: .3rem;
+        -o-border-radius:.3rem;
+}
+.recipe-instruct{
+        padding:1rem 0;
+
+}
+.recipe-meal-img img{
+        object-fit: cover;
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius:50%;
+        margin:0 auto;
+        display:block;
+}
+.recipe-link{
+        margin: 1.4rem 0;
+}
+.recipe-link a{
+        color:white;
+        font-size:1.2rem;
+        font-weight:700;
+        transition:all .4s linear;
+        -webkit-transition: all .4s linear;
+        -moz-transition: all .4s linear;
+        -ms-transition: all .4s linear;
+        -o-transition:all .4s linear;
+        
+}
+.recipe-link a:hover{
+        opacity:.8;
+}
+.meal.notFound{
+        grid-template-columns: 1fr;
+        color:var(--tenne-tawny);
+        font-size:1.8rem;
+        font-weight:600;
+        width:100%;
+}
+@media screen and (min-width: 600px) {
+        .meal-search-box{
+                width:540px;
+                margin-left:auto;
+                margin-right:auto;
+        }
+}
+
+@media screen and (min-width: 768px) {
+        .meal{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap:2rem;
+        }
+        .meal-item{
+                margin:0;
+        }
+        .meal-details{
+                width:700px;
+        }
+}
+@media screen and (min-width: 992px) {
+        .meal{
+                grid-template-columns:repeat(3,1fr);
+        }
+
+}
+/* //////////////////////////////////////////////Library//////////////////////////////////////////////// */
+:root{
+        --blue: rgb(77, 161, 224);
+        --blue-dark:rgb(26, 86, 155);
+}
+
+.main_workout-library{
+        background-color: rgb(232, 232, 232);
+z-index:0;
+min-height:100vh;
+position:relative;
+}
+.main_workout-library .btn{
+        cursor:pointer;
+        outline:0;
+        font-size:1.05rem;
+}
+:root{
+        --blue: rgb(77, 161, 224);
+        --blue-dark:rgb(26, 86, 155);
+}
+
+
+
+.btn{
+        cursor:pointer;
+        outline:0;
+        font-size:1.05rem;
+}
+.exercise-title{
+        font-size:2rem;
+        margin-bottom:1rem;
+}
+.container{
+        min-height:100vh;
+}
+.exercise-wrapper{
+        max-width:1280px;
+        margin:0 auto;
+        padding:2rem;
+        background-color: #fff;
+        text-align: center;
+}
+.exercise-search{
+        margin:2rem 0;
+}
+.body-parts{
+        list-style: none;
+        padding:0;
+        margin:0;
+        display: flex;
+        justify-content: center;
+        gap:15px;
+}
+.body-parts li{
+        transition:.2s;
+        border-radius:12px;
+        padding:2px 5px;
+        cursor:pointer;
+}
+.body-parts li:hover{
+        background-color: var(--blue-dark);
+        color:white;
+}
+.body-parts li:active{
+        background-color: var(--blue);
+}
+.exercise-search cite{
+        font-size:1rem;
+}
+.exercise-search-box{
+        margin:1.2rem 0;
+        display: flex;
+        align-items: stretch;
+}
+.search-control,
+.search-btn{
+        width:100%;
+}
+.search-control{
+        padding:0 1rem;
+        font-size:1.1rem;
+        outline:0;
+        border:1px solid var(--blue);
+        color:var(--blue-dark);
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius:2rem;
+}
+.search-control::placeholder{
+        color:var(--blue);
+        opacity:.7;
+}
+.search-btn{
+        width:55px;
+        height:55px;
+        font-size:1.8rem;
+        background-color: var(--blue);
+        color:white;
+        border:none;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius:2rem;
+        transition:all .4s linear;
+
+}
+.search-btn:hover{
+        background-color: var(--blue);
+
+}
+.exercise-result{
+        margin-top:4rem;
+}
+.exercise{
+        margin: 2.4rem 0;
+}
+.exercise-item{
+        border-radius:1rem;
+
+        overflow: hidden;
+        box-shadow:0 4px 21px -12px rgba(0, 0, 0, 0.79);
+        margin:2rem 0;
+}
+.exercise-item .close-btn{
+        display: none;
+}
+.exercise-item.opened{
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        max-width: 800px;
+        z-index: 100;
+        
+}
+
+.exercise-item.opened .close-btn{
+        position: absolute;
+        right:1rem;
+        top: 1rem;
+        font-size:1.8rem;
+        background-color: white;
+        border:none;
+        width:35px;
+        height:35px;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        opacity:.9;
+}
+
+.overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+        background: rgba(0, 0, 0, 0.6);
+}
+.overlay.closed{
+        display: none;
+}
+.exercise-img img{
+        object-fit: cover;
+        width:100%;
+        height:100%;
+        display: block;
+}
+.exercise-name{
+        padding:1.5rem 0 .5rem;
+        background-color: white;
+}
+.exercise-name h3{
+        font-size:1.4rem;
+}
+.exercise-btn{
+        text-decoration: none;
+        color:white;
+        background-color: var(--blue);
+        font-weight:500;
+        font-size:1.1rem;
+        padding:.75rem 0;
+        display: block;
+        width:175px;
+        margin:1rem auto;
+        border-radius:2rem;
+        transition:all .4s linear;
+
+}
+.exercise-btn:hover{
+        background-color: var(--blue-dark);
+
+}
+.exercise-details{
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        color:white;
+        background-color: var(--blue);
+        border-radius:1rem;
+        width:90%;
+        height:90%;
+        overflow-y: scroll;
+        display: none;
+        padding:2rem 0;
+}
+.exercise-details::-webkit-scrollbar{
+        width:10px;
+        
+
+
+}
+.exercise-details::-webkit-scrollbar-thumb{
+        background-color: whitesmoke;
+        border-radius:2rem;
+}
+
+.showExercise{
+        display: block;
+}
+.exercise-details-content{
+        margin:2rem;
+}
+.exercise-details-content p:not(.exercise-category){
+        padding:1rem 0;
+}
+
+
+.exercise-title{
+        letter-spacing:1px;
+        padding-bottom:1rem;
+}
+
+
+
+.exercise.notFound{
+        grid-template-columns: 1fr;
+        color:var(--blue);
+        font-size:1.8rem;
+        font-weight:600;
+        width:100%;
+}
+@media screen and (min-width: 600px) {
+        .exercise-search-box{
+                width:540px;
+                margin-left:auto;
+                margin-right:auto;
+        }
+}
+
+@media screen and (min-width: 768px) {
+        .exercise{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap:2rem;
+        }
+        .exercise-item{
+                margin:0;
+        }
+        .exercise-details{
+                width:700px;
+        }
+}
+@media screen and (min-width: 992px) {
+        .exercise{
+                grid-template-columns:repeat(3,1fr);
+        }
+
+}
+
+/* ///////////////////////////////////////////////////Programs/////////////////////////////////////////////////////// */
+.main_workouts-library, .main_login-form{
+        background-color: rgb(31, 30, 30);
+        z-index:0;
+        min-height:100vh;
+        position:relative;
+}
+.main_workouts-library::after,
+.main_login-form::after{
+        content:'';
+        display: block;
+        padding:0;
+        margin:0;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:url("https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/yaroslav20003/fd2-project/main/img/cardio.jpg");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(18px);
+        -webkit-filter: blur(18px);
+        opacity:.6;
+        z-index:-1;
+}
+
+
+.workouts-library.container{
+        max-width: 1000px;
+        margin:auto;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+}
+.workouts-library__title{
+        text-align: center;
+        padding:50px 0;
+        color:white;
+        font-size:3em;
+}
+.workout-programs{
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, minmax(50px, 300px));
+        gap:30px;
+}
+.workout-programs__program{
+        position:relative;
+        border-radius:10px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+
+        
+        z-index: 0;
+        color:white;
+        transition:.2s;
+        cursor:pointer;
+        
+}
+.workout-programs__program.workout-programs__program_fat-burn{
+        background: url("https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/yaroslav20003/fd2-project/main/img/cardio.jpg");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+}
+.workout-programs__program.workout-programs__program_strength{
+        background: url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/strength.jpg?raw=true");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+}
+.workout-programs__program.workout-programs__program_rep{
+        background: url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/reps.jpg?raw=true");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+}
+.workout-programs__program.workout-programs__program_muscle{
+        background: url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/muscle.png?raw=true");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+}
+ .workout-programs__program::after{
+        content:'';
+        display: block;
+        padding:0;
+        margin:0;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color: rgba(45, 44, 46, 0.764);
+        z-index:-1;
+        border-radius:10px;
+        transition:.2s;
+} 
+.workout-programs__program:hover::after{
+        background-color: rgba(45, 44, 46, 0.378);
+}
+.workout-programs__program h3{
+        font-size: 2.5em;
+        border-top:2px solid white;
+        border-bottom:2px solid white;
+        padding:5px 0;
+        transition: .2s;
+}
+.workout-programs__program:hover h3{
+        color:rgba(205, 203, 203, 0.682);
+        border-top:2px solid rgba(205, 203, 203, 0.682);
+        border-bottom:2px solid rgba(205, 203, 203, 0.682);
+}
+/* ////////////////////////////////////////////Fat Burn////////////////////////////////////////////////////////////////////////////// */
+.main_workout, .main_login-form{
+        background-color: rgb(31, 30, 30);
+        z-index:0;
+        min-height:100vh;
+        position:relative;
+}
+.main_workout_fat-burning::after,
+                .main_login-form::after{
+                        content:'';
+                        display: block;
+                        padding:0;
+                        margin:0;
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        background:url("https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/yaroslav20003/fd2-project/main/img/cardio.jpg");
+                        background-position: center center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        filter: blur(18px);
+                        -webkit-filter: blur(18px);
+                        opacity:.6;
+                        z-index:-1;
+                }
+                .main_workout_strength-building::after,
+                .main_login-form::after{
+                        content:'';
+                        display: block;
+                        padding:0;
+                        margin:0;
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        background:url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/strength.jpg?raw=true");
+                        background-position: center center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        filter: blur(18px);
+                        -webkit-filter: blur(18px);
+                        opacity:.6;
+                        z-index:-1;
+                }
+                .main_workout_rep-building::after,
+                .main_login-form::after{
+                        content:'';
+                        display: block;
+                        padding:0;
+                        margin:0;
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        right:0;
+                        bottom:0;
+                        background:url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/reps.jpg?raw=true");
+                        background-position: center center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        filter: blur(18px);
+                        -webkit-filter: blur(18px);
+                        opacity:.6;
+                        z-index:-1;
+                }
+
+.main_workout_muscle-build::after,
+.main_login-form::after{
+        content:'';
+        display: block;
+        padding:0;
+        margin:0;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/muscle.png?raw=true");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(18px);
+        -webkit-filter: blur(18px);
+        opacity:.6;
+        z-index:-1;
+}
+.workout.container{
+        max-width:1000px;
+        margin:auto;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+}
+.workout-program{
+        position:relative;
+        border-radius:10px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        gap:40px;
+        z-index: 0;
+        color:white;
+        transition:.2s;
+        padding:30px;
+       
+        
+}
+.workout-program::after{
+        content:'';
+        display: block;
+        padding:0;
+        margin:0;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color: rgba(45, 44, 46, 0.764);
+        z-index:-1;
+        border-radius:10px;
+        transition:.2s;
+}
+.workout-program h3{
+        margin:0;
+        font-size: 2.5em;
+        border-top:2px solid white;
+        border-bottom:2px solid white;
+        padding:5px 0;
+        transition: .2s;
+}
+.workout-program.workout-program_fat-burn{
+        background: url("https://api.allorigins.win/raw?url=https://raw.githubusercontent.com/yaroslav20003/fd2-project/main/img/cardio.jpg");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+}
+.workout-program.workout-program_strength-build{
+        background: url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/strength.jpg?raw=true");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+}
+.workout-program.workout-program_rep-build{
+        background: url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/reps.jpg?raw=true");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+}
+.workout-program.workout-program_muscle-build{
+        background: url("https://api.allorigins.win/raw?url=https://github.com/yaroslav20003/fd2-project/blob/main/img/muscle.png?raw=true");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+}
+.workout-program__choose-level{
+        background-color: rgb(136, 136, 136);
+        border-radius:22px;
+        color:white;
+}
+
+.workout-program__choose-level .beginner, .workout-program__choose-level .intermediate, .workout-program__choose-level .advanced{
+        background: transparent;
+        border:none;
+        color:rgba(0, 0, 0, 0.33);
+        transition:.1s ease-in-out;
+        font-size:1.4em;
+        border-radius:22px;
+        cursor:pointer;
+        padding:10px 20px;
+};
+.workout-program__choose-level .beginner.disabled, .workout-program__choose-level .intermediate.disabled, .workout-program__choose-level .advanced.disabled{
+        opacity:.4;
+}
+.workout-program__choose-level .beginner.active, .workout-program__choose-level .intermediate.active, .workout-program__choose-level .advanced.active{
+        background-color: rgb(203, 203, 203);
+        
+        color:rgb(63, 59, 59);
+}
+.workout-program .stop-watch,
+.workout-program.stop-watch{
+        padding-top:30px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:20px;
+}
+.workout-program .stop-watch h2,
+.workout-program .stop-watch h2{
+        font-size:2em;
+}
+.stop-watch__buttons{
+        display: flex;
+        justify-content: center;
+        gap:20px;
+
+}
+.workout-program .stop-watch.hidden,
+.workout-program .stop-watch.hidden{
+        display: none;
+}
+
+.btn-start-session,
+.btn-stop-session,
+.btn-reset-session{
+        font-size: 1.2em;
+        font-weight:bold;
+        width:70px;
+        height:70px;
+        border-radius:50%;
+        background-color: rgb(242, 242, 242);
+        border:none;
+        cursor:pointer;
+        transition:.2s;
+}
+.workout-program .buttons{
+        display:flex;
+        gap:20px;
+}
+.workout-program .btn-begin,
+.workout-program .btn-finish{
+        font-size: 1.2em;
+        font-weight:bold;
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        background-color: rgb(242, 242, 242);
+        border:none;
+        cursor:pointer;
+        transition:.2s;
+        
+}
+.workout-program .btn-finish.hidden{
+        display: none;
+}
+
+.display-time{
+        padding:0;
+        margin:0;
+        align-self: center;
+}
+.workout-program .btn-begin.disabled{
+        opacity:.4;
+        
+}
+.workout-program .btn-begin:hover,
+.workout-program .btn-finish:hover,
+.btn-start-session:hover,
+.btn-stop-session:hover,
+.btn-reset-session:hover{
+        background-color: rgb(211, 211, 211);
+}
+.workout-program .btn-begin:active,
+.workout-program .btn-finish:active,
+.btn-start-session:active,
+.btn-stop-session:active,
+.btn-reset-session:active{
+        background-color: rgb(74, 71, 71);
+}
+.list-of-exercises{
+        padding:50px 0;
+        text-align: center;
+        max-width: 500px;
+        margin:auto;
+        display: flex;
+        flex-direction:column;
+        gap:20px;
+}
+
+.list-of-exercises .option{
+        border-radius:10px;
+        background-color: rgba(255, 255, 255, 0.497);
+        display: grid;
+        grid-template-columns: minmax(20px, 200px) minmax(20px, 300px);
+        
+}
+.list-of-exercises .option .img img{
+        object-fit: cover;
+        width:100%;
+        height:100%;
+        display: block;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+}
+.list-of-exercises .option .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        
+}
+.list-of-exercises h2{
+        font-size:2.6em;
+        color:white;
+}
+.list-of-exercises .option h4{
+        font-size:1.7em;
+        margin:0;
+}
+.list-of-exercises .option p{
+        margin:0;
+        font-size:1.3em;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
